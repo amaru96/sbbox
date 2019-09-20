@@ -111,7 +111,7 @@ resource "azurerm_virtual_machine" "main" {
   } */
 }
 
-resource "azurerm_virtual_network" "hubVNET" {
+resource "azurerm_virtual_network" "hub" {
   address_space = [
     "10.0.0.0/16",
   ]
@@ -120,7 +120,7 @@ resource "azurerm_virtual_network" "hubVNET" {
   resource_group_name = "hub-rg"
 }
 
-resource "azurerm_resource_group" "hubrg" {
+resource "azurerm_resource_group" "hub" {
   location = "eastus"
   name     = "hub-rg"
 }
